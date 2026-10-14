@@ -8,7 +8,7 @@ import plotly.express as px
 # Load and prepare data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('SuperStore.csv', encoding='latin-1')
+    df = pd.read_csv('Superstore.csv', encoding='latin-1')
     df['Order Date'] = pd.to_datetime(df['Order Date'], errors='coerce')
 
     for col in ['Sales', 'Profit', 'Quantity']:
